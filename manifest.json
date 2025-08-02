@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Nightcrawler",
+  "version": "1.0",
+  "description": "AI-powered job matching analysis for LinkedIn",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*.linkedin.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.linkedin.com/jobs/*"
+      ],
+      "js": [
+        "matcher.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "settings.html",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

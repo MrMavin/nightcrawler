@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom component styles */
+@layer components {
+  .btn-primary {
+    @apply bg-linkedin-500 hover:bg-linkedin-600 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-success hover:bg-green-600 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200;
+  }
+  
+  .btn-outline {
+    @apply border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-2 px-4 rounded-md transition-colors duration-200;
+  }
+  
+  .btn-danger {
+    @apply bg-danger hover:bg-red-600 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-linkedin-500 focus:border-linkedin-500 transition-colors duration-200;
+  }
+  
+  .textarea-field {
+    @apply input-field resize-y min-h-[80px];
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200;
+  }
+  
+  .card-hover {
+    @apply card hover:shadow-md transition-shadow duration-200;
+  }
+  
+  .settings-section {
+    @apply card p-6 mb-6;
+  }
+  
+  .form-group {
+    @apply mb-4;
+  }
+  
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-2;
+  }
+  
+  .text-small {
+    @apply text-sm text-gray-500;
+  }
+}

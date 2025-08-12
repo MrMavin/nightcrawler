@@ -1,0 +1,5 @@
+{
+  "RolesExtractorWorkflow": "{\"main_role\": \"Founding Engineer (m/f/d)\", \"related_roles\": [\"Founding AI Engineer\", \"Founding Engineer\", \"Founding Engineer (m/f/d)\"]}",
+  "ToolsTechExtractorWorkflow": "{\"tools\": [\"VS Code\"], \"tech\": [\"AI\", \"Deep Learning\", \"Data Science\", \"Machine Learning\", \"Embedded\", \"IoT\"]}",
+  "HeavyConstraintsExtractorWorkflow": "{\"heavy_constraints\": [\"Location: Munich, Bavaria, Germany (On-site)\"]}"
+}

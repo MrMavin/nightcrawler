@@ -1,0 +1,36 @@
+Grands logo
+Grands
+Share
+Show more options
+Founding Software Engineer
+Finland · 23 hours ago · Over 100 people clicked apply
+Responses managed off LinkedIn
+
+About the job
+Grands is a tennis platform that helps people find matches and join social tennis events. Whether it’s one-on-one, doubles, or something bigger, Grands makes it easy to discover and play with others nearby.
+
+We’ve built a fully functional product in-house that’s live and running. Over 1k players have already joined, and people are playing daily through the platform or at the social tennis events we organise.
+
+We’re not hiring employees. We’re looking for more founding team members. People with an entrepreneurial mindset who want to build something meaningful on the side, from wherever they are. This is a long-term project and you’ll get equity from day one.
+
+We’re based across Sydney, Stockholm, and Helsinki. It doesn’t matter where you are, but it helps if you like tennis.
+
+You
+
+We’re looking for a founding software engineer to join us in building the next version of Grands. You’ll be the second founding engineer on the team and work across mobile and web. The current stack is mostly React with Next.js and Expo. If you want to write Go, we 're all in.
+
+We ship continuously with high confidence thanks to our test coverage. You should care about good product design, be comfortable working across the stack, and enjoy finding simple solutions that work.
+
+This isn’t a full-time job or a freelance gig. It’s a side project we’re committed to for the long haul. You’ll have full flexibility and get equity from day one. If the idea of building a community-driven tennis platform sounds like your thing, we’d love to hear from you.
+
+About the company
+Grands company logo
+Grands
+299 followers
+
+Follow
+Software Development  2-10 employees  4 on LinkedIn
+Grands is a tennis platform connecting players for matches and organizing social tennis events. Discover, connect and play tennis with new people head to head or doubles - or even bigger tournaments!
+
+We are currently located in Stockholm🇸🇪, Helsinki🇫🇮 and Sydney🇦🇺
+

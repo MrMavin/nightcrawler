@@ -1,0 +1,5 @@
+{
+  "RolesExtractorWorkflow": "{\"main_role\": \"Founding Engineer\", \"related_roles\": [\"tech-wizard\", \"indie hacker\", \"CTO\"]}",
+  "ToolsTechExtractorWorkflow": "{\"tools\": [\"React Native\", \"React\", \"Git\", \"Google Cloud Platform\"], \"tech\": [\"JavaScript\", \"TypeScript\", \"REST APIs\", \"SQL\", \"NoSQL\"]}",
+  "HeavyConstraintsExtractorWorkflow": "{\"heavy_constraints\": [\"Remote work (global) with founding team based in Switzerland\", \"Part-time commitment (60\\u2013100%, minimum 25 hours per week) \\u2013 not full-time\", \"Proficiency in English required\"]}"
+}

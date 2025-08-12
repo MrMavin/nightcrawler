@@ -1,0 +1,5 @@
+{
+  "RolesExtractorWorkflow": "{\"main_role\": \"Founding Engineer\", \"related_roles\": [\"Founding Engineer Intern\"]}",
+  "ToolsTechExtractorWorkflow": "{\"tools\": [], \"tech\": []}",
+  "HeavyConstraintsExtractorWorkflow": "{\"heavy_constraints\": [\"Work location: Hackerhouse in Latin America (live-in)\", \"Relocation to Latin America required\", \"In-person / live-in work arrangement (no remote option)\", \"Contract type: founding engineer intern (not full\\u2011time or standard contract)\"]}"
+}

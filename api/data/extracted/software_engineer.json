@@ -1,0 +1,5 @@
+{
+  "RolesExtractorWorkflow": "{\"main_role\": \"Founding Software Engineer\", \"related_roles\": [\"founding engineer\", \"software engineer\"]}",
+  "ToolsTechExtractorWorkflow": "{\"tools\": [\"React\", \"Next.js\", \"Expo\"], \"tech\": [\"Go\"]}",
+  "HeavyConstraintsExtractorWorkflow": "{\"heavy_constraints\": [\"Not a full-time job (side project)\", \"Not a freelance gig\"]}"
+}

@@ -1,0 +1,82 @@
+Founding Engineer (m/f/d)
+Munich, Bavaria, Germany · Reposted 5 hours ago · 39 people clicked apply
+Promoted by hirer · Responses managed off LinkedIn
+
+
+On-site
+
+ Full-time
+Matches your job preferences, job type is Full-time.
+
+  3 of 10 skills match
+Matches your job preferences, job type is {}.
+
+Apply
+
+Save
+Save Founding Engineer (m/f/d) at Enduin
+Founding Engineer (m/f/d)
+Enduin · Munich, Bavaria, Germany (On-site)
+
+Apply
+
+Save
+Save Founding Engineer (m/f/d) at Enduin
+Show more options
+See how you compare to 39 others who clicked apply
+Access exclusive applicant insights, see jobs where you have the highest chance of hearing back, and more.
+
+Retry Premium for €0
+Meet the hiring team
+Johannes Gensheimer is hiring
+Johannes Gensheimer  
+ 2nd
+Entrepreneur | Max Planck, TUM & KIT
+Job poster · 1 mutual connection
+
+Message
+About the job
+Adoption rates of AI in many software fields peak above 90%, and the fastest growing companies excel in that field, reaching $100m revenues in just months after go-to-market (e.g., Lovable or Cursor). In the embedded and low-level space, the adoption is still below 50% — but that also makes sense, as building embedded software is fundamentally different from, for example, a frontend or mobile app. Also, the requirements are different. Once deployed, over-the-air updates are not as easy as redeploying a website. Safety is essential — the airbag needs to explode. And the tools available today aren’t built for this vertical.
+
+
+At Enduin, we believe that a vertical solution tailored to the embedded and low-level space will drive adoption and revolutionize how hardware products are built. We are building the Cursor for Embedded - starting by helping developers find bugs in their software using AI.
+
+
+We are a venture-backed, Munich-based startup, supported by the world's largest early-stage VC.
+
+
+Impacting how we build embedded software will impact all electronic hardware products - and directly drive innovation across many fields.
+
+
+Responsibilities
+
+We are looking for a Founding AI Engineer who:
+
+Takes full technical ownership
+Is a leading individual contributor
+Hires a skilled and driven team
+Shapes company culture as much as you shape tech & product
+Supports fundraising and all activities that come with an early-stage startup
+
+
+Qualifications
+
+2+ years of work experience in a fast-paced environment
+2+ years of software engineering experience
+Experience in AI, Deep Learning, Data Science, or Machine Learning
+Experience in Embedded or IoT is a plus, but not required
+
+
+Benefits
+
+Significant equity in the company
+EGYM Wellpass for your fitness & well-being
+
+About the company
+Enduin company logo
+Enduin
+499 followers
+
+Follow
+Software Development  2-10 employees
+Embedded engineers spend up to 60% of their development time debugging, losing valuable hours that could be used to deliver new features and innovations. Enduin’s AI-powered debugging extension for VS Code accelerates bug hunting by up to 70%, empowering engineers to reclaim their time and boost productivity.

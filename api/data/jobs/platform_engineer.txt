@@ -1,0 +1,68 @@
+Plain
+Share
+Show more options
+Senior Platform Engineer
+Italy · 3 days ago · 11 people clicked apply
+
+We are building the fastest, most powerful customer support platform for the next generation of B2B companies. Some of the world’s most forward-thinking companies, like Stytch, Sanity, and Fly.io, rely on Plain to consolidate all the channels where they speak with customers, collaborate with their teams, and speed up their workflow with our lightning-fast UI.
+
+We’re looking for a Senior Platform Engineer to join our team and own the evolution of our infrastructure and tooling to make Plain scale with our customers and dramatically accelerate product teams.
+
+What You’ll Do
+
+You’ll help define and execute the future of our platform architecture, working closely with other engineers to ensure Plain remains fast, reliable, and secure as we scale.
+
+You will:
+
+Lead key infrastructure initiatives. This includes projects like building support for multi-region deployments, overhauling our pre-production and test environments, and tackling performance across the stack. 
+Make the whole team faster. Your job is to build infrastructure that empowers other engineers - not just maintain what’s there. You’ll be improving deployment speed, reducing test flakiness, and enabling faster iteration across the board. 
+Shape our platform direction. You’ll define how we evolve our use of AWS, set patterns and practices for managing infrastructure-as-code, and help us balance technical ambition with pragmatic delivery. 
+Solve problems that matter. You won’t be chasing theoretical scale. You’ll be making high-leverage, business-impactful decisions that help us deliver value to customers faster and more safely. 
+
+Our stack
+
+Our entire system is currently hosted on AWS. We use SST to define all of our infrastructure as code. Every engineer works in their own AWS account, and every pull request deploys a fresh copy of our entire infrastructure, against which integration and end-to-end tests are run.
+
+Plain is a complex, event based serverless system. In practice, this means 100+ Lambdas, RDS, DynamoDB, EventBridge, SQS, and a few other smaller components.
+
+Some of the problems you’ll work on
+
+There’s a lot to like about our infrastructure and development process, but as our codebase and team grow, we’re starting to encounter pain points caused by our infrastructure. These issues are making it harder to move quickly and scale the team.
+
+While there’s a lot of complexity here, at a high level, we’re being slowed down by the structure and patterns of our backend, as well as how we deploy and test Plain.
+
+In this role, you’ll help us iterate on our underlying architecture to enable faster shipping. Some of the projects you might tackle include simplifying our architecture, migrating away from DynamoDB, building our observability stack, adding multi-region support, and fundamentally rethinking how engineers provision, build, debug, and monitor services at Plain. All of this while keeping Plain the most secure place for our customers' data.
+
+Success in this role means enabling the whole team to ship more quickly and with greater confidence.
+
+This is a great fit if you…
+
+Have experience owning infrastructure in early-stage product companies - and enjoy zooming between low-level systems and high-level product context. 
+You’ve collected plenty of scars helping teams go from scrappy early-stage infrastructure and practices to mature and resilient systems. 
+Are deeply familiar with AWS, including its sharp edges, and can guide architectural decisions in a way that’s practical and pragmatic. 
+Care more about accelerating teams and delivering value than building the most elegant system or using novel technologies. 
+Get energy from building things that compound over time - systems, processes, environments that make everyone around you better. 
+Still enjoy building product features, even if your happy place is debugging IAM policies or refactoring networking stacks. 
+You are pragmatic about cost versus value decisions. Sometimes the best solution will be to buy something, sometimes to build it internally. Your judgement will inequivocably be aligned with Plain's business goals. 
+
+This won’t be the right role if you…
+
+Are uncomfortable with ambiguity. We have some really exciting traction but are still at an early stage and are constantly learning and trying new things as our company grows. 
+Find learning about new technologies a key motivation for coming to work. We invest in what makes us productive but will prefer the known option to the experimental and novel. Postgres is great. 
+Are primarily motivated by solving hyperscale, distributed systems problems. Our infra challenges are real, but the primary lens is productivity and impact—not complexity for complexity’s sake. 
+Are looking to manage others. This is a senior IC role—we’re looking for someone who wants to stay close to the work. 
+Expect all the perks of a big company. We’re a Series A startup—competitive for our stage, but definitely not cushy. 
+
+Compensation Range: £90K - £130K
+
+About the company
+Plain company logo
+Plain
+8,083 followers
+
+Follow
+Software Development  11-50 employees  31 on LinkedIn
+The most powerful AI-native support platform for scaling B2B teams. Plain helps you support your customers where they work – and move from answering tickets to building genuine relationships.
+
+Powering support at: Raycast, Stytch, Sanity, Granola, Resend, Evervault, Galileo, Mintlify, and hundreds more.
+

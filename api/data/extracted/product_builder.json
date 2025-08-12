@@ -1,0 +1,5 @@
+{
+  "RolesExtractorWorkflow": "{\"main_role\": \"Product Builder (Low Code Engineer)\", \"related_roles\": [\"Product Builder\", \"Low Code Engineer\", \"Low\\u2011code Engineer\"]}",
+  "ToolsTechExtractorWorkflow": "{\"tools\": [\"Tray.io\", \"Make\", \"Weweb\", \"Zapier\", \"Slack\", \"Amazon\"], \"tech\": [\"JavaScript\", \"Python\"]}",
+  "HeavyConstraintsExtractorWorkflow": "{\"heavy_constraints\": [\"Location: Milan, Lombardy, Italy (remote-friendly)\", \"Language requirement: fluent English\"]}"
+}

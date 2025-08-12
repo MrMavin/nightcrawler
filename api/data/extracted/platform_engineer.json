@@ -1,0 +1,5 @@
+{
+  "RolesExtractorWorkflow": "{\"main_role\": \"Senior Platform Engineer\", \"related_roles\": []}",
+  "ToolsTechExtractorWorkflow": "{\"tools\": [\"SST\"], \"tech\": [\"AWS\", \"RDS\", \"DynamoDB\", \"EventBridge\", \"SQS\", \"Lambda\", \"Postgres\"]}",
+  "HeavyConstraintsExtractorWorkflow": "{\"heavy_constraints\": [\"Location: Italy\"]}"
+}

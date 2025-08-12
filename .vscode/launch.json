@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Nightcrawler",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/api/src/main.py",
+      "cwd": "${workspaceFolder}/api",
+      "python": "${workspaceFolder}/api/.venv/bin/python",
+      "console": "integratedTerminal",
+      "stopOnEntry": true,
+      "env": { "PYTHONPATH": "${workspaceFolder}/api/src" }
+    }
+  ]
+}

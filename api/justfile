@@ -1,0 +1,34 @@
+# Run the application
+run:
+    poetry run python src/main.py
+
+# Install dependencies
+install:
+    poetry install
+
+# Run in development mode with auto-reload
+dev:
+    poetry run python src/main.py
+
+# Run in debug mode with debugpy
+debug:
+    poetry run python -m debugpy --listen 5678 src/main.py
+
+# Lint code with ruff
+lint:
+    poetry run ruff check .
+
+# Fix linting issues with ruff
+lint-fix:
+    poetry run ruff check --fix .
+
+# Format code with ruff
+format:
+    poetry run ruff format .
+
+# Run both linting and formatting
+check: lint format
+
+# Show available commands
+help:
+    @just --list

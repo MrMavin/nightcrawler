@@ -1,6 +1,35 @@
 import json
 from typing import Any
 
+from flows.simple_extractor import SimpleExtractorWorkflow
+
+
+ROLES_EXTRACTOR_SYSTEM_PROMPT = """
+From the given job description, extract:
+
+Main role: the job being hired for
+Related roles: titles or variants explicit mentioned
+
+Return only valid JSON in this exact schema:
+
+{
+  "main_role": string
+  "related_roles": string[]
+}
+"""
+
+ROLES_EXTRACTOR_PROMPT = """
+{job_description}
+"""
+
+
+def get_roles_extraction_system_prompt() -> str:
+    return ROLES_EXTRACTOR_SYSTEM_PROMPT
+
+
+def get_roles_extraction_prompt(job_description: str) -> str:
+    return ROLES_EXTRACTOR_PROMPT.format(job_description=job_description)
+
 
 def validate_roles_output(output: str) -> dict[str, Any]:
     """Validate and parse the LLM output for roles extraction."""
@@ -33,3 +62,14 @@ def validate_roles_output(output: str) -> dict[str, Any]:
         raise ValueError("Invalid JSON format")
     except Exception as e:
         raise ValueError(f"Validation error: {str(e)}")
+
+
+def create_roles_extractor():
+    """Factory function to create a RolesExtractor using SimpleExtractorWorkflow."""
+    return SimpleExtractorWorkflow(
+        system_prompt_func=get_roles_extraction_system_prompt,
+        user_prompt_func=get_roles_extraction_prompt,
+        validator_func=validate_roles_output,
+        fallback_result={"main_role": "Unknown", "related_roles": []},
+        result_key="roles"
+    )

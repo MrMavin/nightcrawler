@@ -1,0 +1,8 @@
+services:
+  phoenix:
+    image: arizephoenix/phoenix:11
+    container_name: nightcrawler-phoenix
+    ports:
+      - "6006:6006" # UI and OTLP HTTP collector
+      - "4317:4317" # OTLP gRPC collector
+    restart: unless-stopped

@@ -5,87 +5,47 @@ from pathlib import Path
 
 import llama_index.core
 from dotenv import load_dotenv
-
-from flows.job_extractor.simple_roles_extractor import create_roles_extractor
-from flows.job_extractor.simple_tools_tech_extractor import create_tools_tech_extractor
-from flows.job_extractor.simple_heavy_constraints_extractor import create_heavy_constraints_extractor
 from logger import get_logger
-from utils.cache import is_extraction_cached, get_cached_extraction, save_extraction_result
+from llama_index.readers.file import PDFReader
+from cv_index import CVIndex, CVSynthesizer
+from llama_index.core.text_splitter import SentenceSplitter
+from llama_index.core.ingestion import IngestionPipeline
+from cv_properties_transformer import PropertiesExtractorTransformer
+from llama_index.llms.groq import Groq
+from settings import settings
 
 log = get_logger(__name__)
 
 llama_index.core.set_global_handler("arize_phoenix")
+
+sentence_splitter = SentenceSplitter(chunk_size=512, chunk_overlap=64)
 
 
 async def main():
     """Main entry point."""
     load_dotenv()
 
-    log.info("Starting Nightcrawler API")
+    pdf_path = Path(__file__).parent.parent / "data" / "cv" / "cv_mavin.pdf"
+    print(f"PDF path: {pdf_path.absolute()}")
 
-    # Get all txt files from data/jobs directory
-    jobs_dir = Path("data/jobs")
-    txt_files = list(jobs_dir.glob("*.txt"))
+    reader = PDFReader()
+    documents = reader.load_data(str(pdf_path))
 
-    log.info(f"Found {len(txt_files)} job files to process")
+    pipeline = IngestionPipeline(
+        transformations=[sentence_splitter, PropertiesExtractorTransformer()])
 
-    # Define workflows to run
-    workflows = [
-        ("RolesExtractorWorkflow", create_roles_extractor),
-        ("ToolsTechExtractorWorkflow", create_tools_tech_extractor),
-        ("HeavyConstraintsExtractorWorkflow", create_heavy_constraints_extractor),
-    ]
+    nodes = await pipeline.arun(documents=documents)
+    llm = Groq(model="openai/gpt-oss-120b", api_key=settings.groq_api_key)
+    index = CVIndex(nodes)
+    query = index.as_query_engine(llm=llm)
+    questions = ["What is the candidate name?", "Is the candidate willing to work remotely?",
+                 "Has the candidate experience in a startup environment?", "Is the candidate good as an AI Engineer?", "Is the candidate going to work in LatAM?", "Does the candidate know Zapier?", "Is he good working with n8n?", "Care more about accelerating teams and delivering value than building the most elegant system or using novel technologies?", "Compensation is 50k/year"]
 
-    # Process each job file
-    for job_file in txt_files:
-        log.info(f"Processing job file: {job_file.name}")
-
-        # Read the job content
-        job_content = job_file.read_text()
-        log.debug(f"Job content length: {len(job_content)} characters")
-
-        # Check which workflows need to be run (not cached)
-        workflows_to_run = []
-        cached_results = {}
-
-        for workflow_name, workflow_factory in workflows:
-            if is_extraction_cached(job_file, workflow_name):
-                log.info(
-                    f"Found cached result for {job_file.name} - {workflow_name}")
-                cached_results[workflow_name] = get_cached_extraction(
-                    job_file, workflow_name)
-            else:
-                log.info(
-                    f"No cache found for {job_file.name} - {workflow_name}, adding to execution queue")
-                workflows_to_run.append((workflow_name, workflow_factory))
-
-        # Run workflows in parallel if needed
-        if workflows_to_run:
-            log.info(
-                f"Running {len(workflows_to_run)} workflows in parallel for {job_file.name}")
-
-            async def run_workflow(workflow_name, workflow_factory):
-                w = workflow_factory()
-                result = await w.run(job_description=job_content)
-                save_extraction_result(job_file, workflow_name, result)
-                return workflow_name, result
-
-            # Execute workflows in parallel
-            tasks = [run_workflow(name, factory) for name, factory in workflows_to_run]
-            results = await asyncio.gather(*tasks)
-
-            # Add new results to cached results
-            for workflow_name, result in results:
-                cached_results[workflow_name] = result
-
-        log.info(f"Completed processing {job_file.name}")
-        print(f"\n--- Results for {job_file.name} ---")
-        for workflow_name, result in cached_results.items():
-            print(f"\n{workflow_name}:")
-            print(result)
-        print("---" * 20)
-
-    log.info("All job files processed")
+    for question in questions:
+        res = query.query(question)
+        print("\n\n")
+        print(f"Question: {question}")
+        print(res)
 
 
 if __name__ == "__main__":
